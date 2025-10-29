@@ -1,0 +1,1272 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/onto_process/"
+     xml:base="http://www.semanticweb.org/onto_process/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://ns.ottr.xyz/0.4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdl="http://rds.posccaesar.org/ontology/plm/rdl/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdl1="http://rds.posccaesar.org/ontology/lis14/rdl/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:onto_model="http://www.semanticweb.org/onto_model#"
+     xmlns:onto_process="http://www.semanticweb.org/onto_process#"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+     xmlns:onto_process_tennessee_eastman="http://www.semanticweb.org/onto_process_tennessee_eastman#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/onto_process">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/onto_process/0.0.0"/>
+        <owl:imports rdf:resource="file:///Users/shuyuan/Research/OntoMon/rdf/onto_model.rdf"/>
+        <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/plm/ont/equipment/0.9.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasDownstreamUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasDownstreamUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasHeatExchangerInletStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasHeatExchangerInletStream">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasHeatExchangerOutletStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasHeatExchangerOutletStream">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasInletStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasInletStream">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasOutletStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasOutletStream">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasUpstreamUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasUpstreamUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#hasVariable">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/onto_process#Stream"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/onto_process#UnitOperation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#isMeasuredWithUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#isMeasuredWithUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#isVariableOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_process#isVariableOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#is-a -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#is-a"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_process#hasTag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_process#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Unit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_process#PipeManifold"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_process#Stream"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#UnitOperation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_process#UnitOperation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Variable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_process#Variable"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Celsius"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Hour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilopascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilopascal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilowatt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilowatt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Level -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Accumulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Accumulation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Flow_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Flow_Rate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Max_Accumulation_Volume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#One -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#One"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Percent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Pressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Pressure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Second"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Temperature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Time_Stamp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Time_Stamp"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Valve"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Work -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Work"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Compressor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Compressor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Inlet"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Outlet"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Mass_Accumulation_Compresser"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Work_1401"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS14286497"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Condenser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Condenser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <onto_process:hasHeatExchangerInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Condenser_Heat_Exchanger_Inlet"/>
+        <onto_process:hasHeatExchangerOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_13"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_7"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Condenser_to_Separator"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Mass_Accumulation_Condenser"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS278774"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1001</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Mass_Flow_Rate"/>
+        <onto_process:hasTag>FI-1002</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Mass_Flow_Rate"/>
+        <onto_process:hasTag>FI-1003</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1004</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1005</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1006</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1101</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1301</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Mass_Flow_Rate"/>
+        <onto_process:hasTag>FI-1501</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Flowrate_1502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Flowrate_1502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_process:hasTag>FI-1502</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Gas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Gas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Level_1101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Level_1101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Level"/>
+        <onto_process:hasTag>LIAZ-1101</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Level_1301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Level_1301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Level"/>
+        <onto_process:hasTag>LIAZ-1301</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Level_1501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Level_1501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Level"/>
+        <onto_process:hasTag>LIAZ-1501</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Liquid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Liquid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Mass_Accumulation_Compresser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Mass_Accumulation_Compresser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Mass_Accumulation"/>
+        <onto_process:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</onto_process:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Mass_Accumulation_Condenser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Mass_Accumulation_Condenser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Mass_Accumulation"/>
+        <onto_process:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</onto_process:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_1"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_Recycle"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_A_to_D"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_2"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_A_to_D"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_D_to_E"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_3"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_D_to_E"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_6"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_9"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet_to_Compressor_Inlet"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Recycle"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet_to_Compressor_Inlet"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Inlet"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Outlet"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_8"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Compressor_Recycle"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#PipeManifold_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#PipeManifold_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_5"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_8"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Feed_Recycle"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS903171211"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Pressure_1101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Pressure_1101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilopascal"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Pressure"/>
+        <onto_process:hasTag>PIAZ-1101</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Pressure_1301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Pressure_1301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilopascal"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Pressure"/>
+        <onto_process:hasTag>PI-1301</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Pressure_1501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Pressure_1501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilopascal"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Pressure"/>
+        <onto_process:hasTag>PI-1501</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Reactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Reactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <onto_process:hasHeatExchangerInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Reactor_Heat_Exchanger_Inlet"/>
+        <onto_process:hasHeatExchangerOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_12"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_6"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_7"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Level_1101"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Pressure_1101"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Temperature_1101"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Volume_Reactor"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS4316825224"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Separator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Separator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <onto_process:hasHeatExchangerInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Inlet"/>
+        <onto_process:hasHeatExchangerOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Outlet"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Condenser_to_Separator"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_10"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Level_1301"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Pressure_1301"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Temperature_1301"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Volume_Separator"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS9647297"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_1"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1001"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1001"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Stripper"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Separator"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1301"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1301"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Stripper"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1502"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1501"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Temperature_1103"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1101"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Temperature_1202"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1201"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_2"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1002"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1002"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_3"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1003"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1003"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Stripper"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1004"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1004"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_7"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Stripper"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Reactor"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_3"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1101"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Condenser"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Reactor"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_7"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_6"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1006"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_4"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1005"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1005"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Compressor_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Compressor_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Compressor"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_5"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Compressor_Outlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Compressor_Outlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_6"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Compressor"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Compressor_Recycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Compressor_Recycle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_5"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_6"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1401"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Condenser_Heat_Exchanger_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Condenser_Heat_Exchanger_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Condenser_to_Separator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Condenser_to_Separator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Separator"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Condenser"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Feed_A_to_D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Feed_A_to_D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_2"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_1"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Feed_D_to_E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Feed_D_to_E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_3"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_2"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Feed_Recycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Feed_Recycle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_1"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_7"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Reactor_Heat_Exchanger_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Reactor_Heat_Exchanger_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Outlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Separator_Heat_Exchanger_Outlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_4"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#Separator"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet_to_Compressor_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Separator_Top_Outlet_to_Compressor_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasDownstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_5"/>
+        <onto_process:hasUpstreamUnit rdf:resource="http://www.semanticweb.org/onto_process#PipeManifold_4"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Inlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Inlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Flowrate_1501"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Valve_1502"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Outlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Outlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Stream"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS421199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Stripper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Stripper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#UnitOperation"/>
+        <onto_process:hasHeatExchangerInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Inlet"/>
+        <onto_process:hasHeatExchangerOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_Stripper_Heat_Exchanger_Outlet"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_10"/>
+        <onto_process:hasInletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_4"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_11"/>
+        <onto_process:hasOutletStream rdf:resource="http://www.semanticweb.org/onto_process#Stream_5"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Level_1501"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Pressure_1501"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Temperature_1501"/>
+        <onto_process:hasVariable rdf:resource="http://www.semanticweb.org/onto_process#Volume_Stripper"/>
+        <owl:is-a rdf:resource="http://data.posccaesar.org/rdl/RDS283949"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Temperature_1101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Temperature_1101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_process:hasTag>TIAZ-1101</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Temperature_1103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Temperature_1103">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_process:hasTag>TI-1103</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Temperature_1202 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Temperature_1202">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_process:hasTag>TI-1202</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Temperature_1301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Temperature_1301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_process:hasTag>TI-1301</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Temperature_1501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Temperature_1501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_process:hasTag>TI-1501</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Second"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Time_Stamp"/>
+        <onto_process:hasTag>T</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1001</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1002</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1003</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1004</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1005</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1101</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1201</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1301</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1401</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1501</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Valve_1502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Valve_1502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_process:hasTag>V-1502</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Volume_Reactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Volume_Reactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume"/>
+        <onto_process:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6667</onto_process:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Volume_Separator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Volume_Separator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume"/>
+        <onto_process:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.29</onto_process:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Volume_Stripper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Volume_Stripper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume"/>
+        <onto_process:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1565</onto_process:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Work_1401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Work_1401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_process#Variable"/>
+        <onto_process:isMeasuredWithUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilowatt"/>
+        <onto_process:isVariableOf rdf:resource="http://www.semanticweb.org/onto_model#Work"/>
+        <onto_process:hasTag>JI-1401</onto_process:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_process#Gas/Liquid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_process#Gas/Liquid"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

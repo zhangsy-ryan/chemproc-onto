@@ -1,0 +1,1062 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/onto_model/"
+     xml:base="http://www.semanticweb.org/onto_model/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:om-2="http://www.ontology-of-units-of-measure.org/resource/om-2/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:onto_model="http://www.semanticweb.org/onto_model#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/onto_model">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/onto_model/0.0.0"/>
+        <owl:imports rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasFittingParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_model#hasFittingParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_model#hasLaw"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_model#hasParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_model#hasUnit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#isAlternativeUnitOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/onto_model#isAlternativeUnitOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasDefault -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasDefault">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasFittingLowerBound -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasFittingLowerBound">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasFittingUpperBound -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasFittingUpperBound">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasFormula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasFormula">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasOffsetToStandard -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasOffsetToStandard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasRatioToStandard -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasRatioToStandard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#hasSymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#hasSymbol">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Parameter"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#isApplicableToMultiple -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/onto_model#isApplicableToMultiple">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/onto_model#Balance_Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Balance_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Balance_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/onto_model#Law"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Law"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Parameter_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Parameter_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/onto_model#Law"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/onto_model#Unit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetrePerSecond-Time -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetrePerSecond-Time">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Celsius -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Celsius"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kelvin"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kelvin -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kelvin"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kilogram"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kilogram"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerSecond-Time -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerSecond-Time">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Second"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Second -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Second"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilopascal -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilopascal">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kilopascal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilopascal -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kilopascal"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilowatt -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilowatt">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Kilowatt"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilowatt -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Kilowatt"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/one -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/one">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#One -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#One"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/pascal -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/pascal">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Pascal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Pascal -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Pascal"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/percent -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/percent">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Percent -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Percent"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Second"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Second -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Second"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/watt -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/watt">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/onto_model#Watt"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Watt -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/onto_model#Watt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Celsius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Kelvin"/>
+        <onto_model:hasOffsetToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">273.15</onto_model:hasOffsetToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>°C</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Constant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Constant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kelvin"/>
+        <onto_model:hasFittingLowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</onto_model:hasFittingLowerBound>
+        <onto_model:hasFittingUpperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6000.0</onto_model:hasFittingUpperBound>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>C</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Intercept -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Intercept">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasFittingLowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-10.0</onto_model:hasFittingLowerBound>
+        <onto_model:hasFittingLowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-20.0</onto_model:hasFittingLowerBound>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>b</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Pressure_Balance_Law -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Pressure_Balance_Law">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Balance_Law"/>
+        <onto_model:hasFittingParameter rdf:resource="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Constant"/>
+        <onto_model:hasFittingParameter rdf:resource="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Intercept"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Constant"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Clausius-Clapeyron_Intercept"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Pressure"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Temperature"/>
+        <onto_model:hasFormula rdf:parseType="Literal"><math>
+    <mrow>
+        <mrow>
+            <mo>ln</mo>
+            <mrow>
+                <mo>(</mo>
+                <mi>P</mi>
+                <mo>)</mo>
+            </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mfrac>
+            <mi>C</mi>
+            <mi>T</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mi>b</mi>
+    </mrow>
+</math></onto_model:hasFormula>
+        <onto_model:isApplicableToMultiple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</onto_model:isApplicableToMultiple>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msup>
+            <mi>m</mi>
+            <mtext>3</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Hour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.7777778E-4</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msup>
+            <mi>m</mi>
+            <mn>3</mn>
+        </msup>
+        <mi> </mi>
+        <msup>
+            <mi>h</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msup>
+            <mi>m</mi>
+            <mn>3</mn>
+        </msup>
+        <mi> </mi>
+        <msup>
+            <mi>s</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Density -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Density">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter"/>
+        <onto_model:hasFittingLowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.08</onto_model:hasFittingLowerBound>
+        <onto_model:hasFittingUpperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</onto_model:hasFittingUpperBound>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>ρ</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Flow_Direction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Flow_Direction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>I</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kelvin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>K</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Standard_Cubic_Meter_per_Second"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2777778</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kscmh</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kg</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Cubic_Meter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kg</mi>
+        <mi> </mi>
+        <msup>
+            <mi>m</mi>
+            <mtext>−3</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Hour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Second"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.7777778E-4</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kg</mi>
+        <mi> </mi>
+        <msup>
+            <mi>hr</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilogram_per_Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilogram_per_Second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kg</mi>
+        <mi> </mi>
+        <msup>
+            <mi>s</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilopascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilopascal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Pascal"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kPa</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Kilowatt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Kilowatt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Watt"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>kW</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Level -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Level">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+        <onto_model:hasDefault rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</onto_model:hasDefault>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>L</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Accumulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Accumulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasLaw rdf:resource="http://www.semanticweb.org/onto_model#Mass_Accumulation_Law_with_Level"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>m</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Accumulation_Law_with_Level -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Accumulation_Law_with_Level">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter_Law"/>
+        <onto_model:hasFittingParameter rdf:resource="http://www.semanticweb.org/onto_model#Density"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Density"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Level"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume"/>
+        <onto_model:hasFormula rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>ρ</mi>
+        <msub>
+            <mi>V</mi>
+            <mtext>max</mtext>
+        </msub>
+        <mi>L</mi>
+    </mrow>
+</math></onto_model:hasFormula>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Balance_Law -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Balance_Law">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Balance_Law"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Flow_Direction"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Mass_Accumulation"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Mass_Flow_Rate"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Time_Stamp"/>
+        <onto_model:hasFormula rdf:parseType="Literal"><math>
+    <mrow>
+        <mrow>
+            <mo>∫</mo>
+            <mrow>
+                <mo>∑</mo>
+                <mrow>
+                    <msub>
+                        <mi>Q</mi>
+                        <mtext>m</mtext>
+                    </msub>
+                    <mi>I</mi>
+                </mrow>
+            </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+            <mo>∑</mo>
+            <mrow>
+                <mi>m</mi>
+                <mtext>[</mtext>
+                <mn>0</mn>
+                <mtext>]</mtext>
+            </mrow>
+        </mrow>
+        <mo>−</mo>
+        <mrow>
+            <mo>∑</mo>
+            <mrow>
+                <mi>m</mi>
+                <mtext>[</mtext>
+                <mi>t</mi>
+                <mtext>]</mtext>
+            </mrow>
+        </mrow>
+    </mrow>
+</math></onto_model:hasFormula>
+        <onto_model:isApplicableToMultiple rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto_model:isApplicableToMultiple>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Flow_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Flow_Rate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasLaw rdf:resource="http://www.semanticweb.org/onto_model#Mass_Flow_Rate_Law_with_Volumetric_Flow_Rate"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Hour"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilogram_per_Second"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msub>
+            <mi>Q</mi>
+            <mtext>m</mtext>
+        </msub>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Mass_Flow_Rate_Law_with_Volumetric_Flow_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Mass_Flow_Rate_Law_with_Volumetric_Flow_Rate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter_Law"/>
+        <onto_model:hasFittingParameter rdf:resource="http://www.semanticweb.org/onto_model#Density"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Density"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Valve"/>
+        <onto_model:hasParameter rdf:resource="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate"/>
+        <onto_model:hasFormula rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>ρ</mi>
+        <mi>Q</mi>
+        <mi>v</mi>
+    </mrow>
+</math></onto_model:hasFormula>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Max_Accumulation_Volume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Max_Accumulation_Volume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msub>
+            <mi>V</mi>
+            <mtext>max</mtext>
+        </msub>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Millilitre_per_Minute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Millilitre_per_Minute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#Cubic_Meter_per_Second"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.6666666E-8</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>mL</mi>
+        <mi> </mi>
+        <msup>
+            <mi>min</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#One -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#One">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Pascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Pascal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>Pa</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Percent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:isAlternativeUnitOf rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_model:hasRatioToStandard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</onto_model:hasRatioToStandard>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>%</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Pressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilopascal"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Pascal"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>P</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>s</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Standard_Cubic_Meter_per_Second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Standard_Cubic_Meter_per_Second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msup>
+            <mi>m</mi>
+            <mn>3</mn>
+        </msup>
+        <mi> </mi>
+        <msup>
+            <mi>s</mi>
+            <mtext>−1</mtext>
+        </msup>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Celsius"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kelvin"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>T</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Time_Stamp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Time_Stamp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Second"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>t</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#One"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Percent"/>
+        <onto_model:hasDefault rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</onto_model:hasDefault>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>v</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Volumetric_Flow_Rate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilo_Standard_Cubic_Meter_per_Hour"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Standard_Cubic_Meter_per_Second"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>Q</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Watt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Watt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Unit"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <mi>W</mi>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/onto_model#Work -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/onto_model#Work">
+        <rdf:type rdf:resource="http://www.semanticweb.org/onto_model#Parameter"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Kilowatt"/>
+        <onto_model:hasUnit rdf:resource="http://www.semanticweb.org/onto_model#Watt"/>
+        <onto_model:hasSymbol rdf:parseType="Literal"><math>
+    <mrow>
+        <msub>
+            <mi>W</mi>
+        </msub>
+    </mrow>
+</math></onto_model:hasSymbol>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
